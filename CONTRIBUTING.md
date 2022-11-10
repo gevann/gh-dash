@@ -25,18 +25,18 @@ To navigate our codebase with confidence, familiar yourself with:
 
 If you spot a problem, first search if an issue already exists.
 
-If a related issue doesn't exist, you can open a new issue using a relevant [issue form](https://github.com/dlvhdr/gh-dash/issues/new/choose).
+If a related issue doesn't exist, you can open a new issue using a relevant [issue form](https://github.com/gevann/gh-dash/issues/new/choose).
 
 ### Solve an issue
 
-Scan through our [existing issues](https://github.com/dlvhdr/gh-dash/issues) to find one that interests you.
+Scan through our [existing issues](https://github.com/gevann/gh-dash/issues) to find one that interests you.
 
 #### Make Changes
 
 1. Fork the repository.
 
 ```sh
-git clone https://github.com/dlvhdr/gh-dash.git
+git clone https://github.com/gevann/gh-dash.git
 ```
 
 or if you have the `gh` cli

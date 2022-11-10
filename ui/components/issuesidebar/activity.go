@@ -7,10 +7,10 @@ import (
 
 	"github.com/charmbracelet/glamour"
 	"github.com/charmbracelet/lipgloss"
-	"github.com/dlvhdr/gh-dash/data"
-	"github.com/dlvhdr/gh-dash/ui/markdown"
-	"github.com/dlvhdr/gh-dash/ui/styles"
-	"github.com/dlvhdr/gh-dash/utils"
+	"github.com/gevann/gh-dash/data"
+	"github.com/gevann/gh-dash/ui/markdown"
+	"github.com/gevann/gh-dash/ui/styles"
+	"github.com/gevann/gh-dash/utils"
 )
 
 type RenderedActivity struct {

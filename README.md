@@ -2,7 +2,7 @@
 
 ✨ A GitHub (`gh`) CLI extension to display a dashboard with **pull requests** and **issues** by filters you care about.
 
-<img width="800px" src="https://raw.githubusercontent.com/dlvhdr/gh-prs/main/demo.gif" />
+<img width="800px" src="https://raw.githubusercontent.com/gevann/gh-prs/main/demo.gif" />
 
 ## Installation
 
@@ -28,7 +28,7 @@
 
    ```bash
    # git
-   git clone https://github.com/dlvhdr/gh-dash
+   git clone https://github.com/gevann/gh-dash
 
    # GitHub CLI
    gh repo clone dlvhdr/gh-dash
@@ -50,7 +50,7 @@
    <summary><strong>🌈 How do I get these exact colors and font?</strong></summary>
    
    > I'm using [Alacritty](https://github.com/alacritty/alacritty) with the [tokyonight theme](https://github.com/folke/tokyonight.nvim) and the [Fira Code](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode) Nerd Font.
-   > For my full setup check out [my dotfiles](https://github.com/dlvhdr/dotfiles/blob/main/.config/alacritty/alacritty.yml).
+   > For my full setup check out [my dotfiles](https://github.com/gevann/dotfiles/blob/main/.config/alacritty/alacritty.yml).
 </details>
 
 ## Configuring

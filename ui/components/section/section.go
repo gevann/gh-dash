@@ -3,11 +3,11 @@ package section
 import (
 	"github.com/charmbracelet/bubbles/spinner"
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/dlvhdr/gh-dash/config"
-	"github.com/dlvhdr/gh-dash/data"
-	"github.com/dlvhdr/gh-dash/ui/components/table"
-	"github.com/dlvhdr/gh-dash/ui/constants"
-	"github.com/dlvhdr/gh-dash/ui/context"
+	"github.com/gevann/gh-dash/config"
+	"github.com/gevann/gh-dash/data"
+	"github.com/gevann/gh-dash/ui/components/table"
+	"github.com/gevann/gh-dash/ui/constants"
+	"github.com/gevann/gh-dash/ui/context"
 )
 
 type Model struct {

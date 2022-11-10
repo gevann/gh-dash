@@ -7,7 +7,7 @@ import (
 	"os"
 
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/dlvhdr/gh-dash/ui"
+	"github.com/gevann/gh-dash/ui"
 )
 
 func createModel(debug bool) (ui.Model, *os.File) {

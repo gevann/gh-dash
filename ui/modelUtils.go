@@ -6,8 +6,8 @@ import (
 	"os/exec"
 	"text/template"
 
-	"github.com/dlvhdr/gh-dash/data"
-	"github.com/dlvhdr/gh-dash/ui/components/section"
+	"github.com/gevann/gh-dash/data"
+	"github.com/gevann/gh-dash/ui/components/section"
 )
 
 func (m *Model) getCurrSection() section.Section {

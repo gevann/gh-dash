@@ -1,6 +1,6 @@
 package context
 
-import "github.com/dlvhdr/gh-dash/config"
+import "github.com/gevann/gh-dash/config"
 
 type ProgramContext struct {
 	ScreenHeight      int

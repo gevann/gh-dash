@@ -4,11 +4,11 @@ import (
 	"fmt"
 
 	"github.com/charmbracelet/lipgloss"
-	"github.com/dlvhdr/gh-dash/data"
-	"github.com/dlvhdr/gh-dash/ui/components/table"
-	"github.com/dlvhdr/gh-dash/ui/constants"
-	"github.com/dlvhdr/gh-dash/ui/styles"
-	"github.com/dlvhdr/gh-dash/utils"
+	"github.com/gevann/gh-dash/data"
+	"github.com/gevann/gh-dash/ui/components/table"
+	"github.com/gevann/gh-dash/ui/constants"
+	"github.com/gevann/gh-dash/ui/styles"
+	"github.com/gevann/gh-dash/utils"
 )
 
 type PullRequest struct {

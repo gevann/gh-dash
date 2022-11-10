@@ -2,7 +2,7 @@ package prsidebar
 
 import (
 	"github.com/charmbracelet/lipgloss"
-	"github.com/dlvhdr/gh-dash/ui/styles"
+	"github.com/gevann/gh-dash/ui/styles"
 )
 
 var (

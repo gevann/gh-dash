@@ -35,6 +35,7 @@ type Defaults struct {
 	Preview     PreviewConfig `yaml:"preview"`
 	PrsLimit    int           `yaml:"prsLimit"`
 	IssuesLimit int           `yaml:"issuesLimit"`
+	RunsLimit   int           `yaml:"runsLimit"`
 	View        ViewType      `yaml:"view"`
 }
 
@@ -72,6 +73,7 @@ func (parser ConfigParser) getDefaultConfig() Config {
 			},
 			PrsLimit:    20,
 			IssuesLimit: 20,
+			RunsLimit:   20,
 			View:        PRsView,
 		},
 		PRSections: []SectionConfig{
@@ -124,7 +126,7 @@ Create one under: %s
 Example of a config.yml file:
 %s
 
-For more info, go to https://github.com/dlvhdr/gh-dash
+For more info, go to https://github.com/gevann/gh-dash
 press q to exit.
 
 Original error: %v`,

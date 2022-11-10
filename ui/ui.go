@@ -6,18 +6,19 @@ import (
 	"github.com/charmbracelet/bubbles/key"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
-	"github.com/dlvhdr/gh-dash/config"
-	"github.com/dlvhdr/gh-dash/data"
-	"github.com/dlvhdr/gh-dash/ui/components/help"
-	"github.com/dlvhdr/gh-dash/ui/components/issuesidebar"
-	"github.com/dlvhdr/gh-dash/ui/components/issuessection"
-	"github.com/dlvhdr/gh-dash/ui/components/prsidebar"
-	"github.com/dlvhdr/gh-dash/ui/components/prssection"
-	"github.com/dlvhdr/gh-dash/ui/components/section"
-	"github.com/dlvhdr/gh-dash/ui/components/sidebar"
-	"github.com/dlvhdr/gh-dash/ui/components/tabs"
-	"github.com/dlvhdr/gh-dash/ui/context"
-	"github.com/dlvhdr/gh-dash/utils"
+	"github.com/gevann/gh-dash/config"
+	"github.com/gevann/gh-dash/data"
+	"github.com/gevann/gh-dash/ui/components/help"
+	"github.com/gevann/gh-dash/ui/components/issuesidebar"
+	"github.com/gevann/gh-dash/ui/components/issuessection"
+	"github.com/gevann/gh-dash/ui/components/listviewport/runssection"
+	"github.com/gevann/gh-dash/ui/components/prsidebar"
+	"github.com/gevann/gh-dash/ui/components/prssection"
+	"github.com/gevann/gh-dash/ui/components/section"
+	"github.com/gevann/gh-dash/ui/components/sidebar"
+	"github.com/gevann/gh-dash/ui/components/tabs"
+	"github.com/gevann/gh-dash/ui/context"
+	"github.com/gevann/gh-dash/utils"
 )
 
 type Model struct {
@@ -28,6 +29,7 @@ type Model struct {
 	help          help.Model
 	prs           []section.Section
 	issues        []section.Section
+	runs          []section.Section
 	ready         bool
 	isSidebarOpen bool
 	tabs          tabs.Model
@@ -241,6 +243,9 @@ func (m *Model) updateRelevantSection(msg section.SectionMsg) (cmd tea.Cmd) {
 	case issuessection.SectionType:
 		updatedSection, cmd = m.issues[msg.GetSectionId()].Update(msg)
 		m.issues[msg.GetSectionId()] = updatedSection
+	case runssection.SectionType:
+		updatedSection, cmd = m.runs[msg.GetSectionId()].Update(msg)
+		m.runs[msg.GetSectionId()] = updatedSection
 	}
 
 	return cmd
@@ -258,12 +263,12 @@ func (m *Model) syncSidebarPr() {
 	currRowData := m.getCurrRowData()
 	width := m.sidebar.GetSidebarContentWidth()
 
-	switch data := currRowData.(type) {
+	switch t := currRowData.(type) {
 	case *data.PullRequestData:
-		content := prsidebar.NewModel(data, width).View()
+		content := prsidebar.NewModel(t, width).View()
 		m.sidebar.SetContent(content)
 	case *data.IssueData:
-		content := issuesidebar.NewModel(data, width).View()
+		content := issuesidebar.NewModel(t, width).View()
 		m.sidebar.SetContent(content)
 	}
 }
